@@ -364,3 +364,40 @@ nav span {
 .chat-close-btn:hover {
     background: #f3a7bd;
 }
+
+.rewards-card {
+    text-align: left;
+}
+
+.reward-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffdce2;
+    border: 3px solid #5b126d;
+    border-radius: 16px;
+    padding: 12px;
+    margin-top: 12px;
+    box-shadow: 2px 2px 0 #7b2a8a;
+}
+
+.reward-points {
+    min-width: 80px;
+    text-align: center;
+    background: #f3a7bd;
+    border: 3px solid #5b126d;
+    border-radius: 999px;
+    padding: 10px 8px;
+    font-weight: bold;
+    color: #2b1230;
+}
+
+.reward-details h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+}
+
+.reward-details p {
+    margin: 0;
+    font-size: 14px;
+}

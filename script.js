@@ -162,11 +162,25 @@ function showQuest() {
             <button class="secondary">Check Nearest PawStation</button>
         </div>
 
-        <div class="card">
-            <h2>Rewards</h2>
-            <p>100 points: 10% off pet food</p>
-            <p>300 points: 20% off cat toys</p>
-        </div>
+<div class="card rewards-card">
+  <h2>Rewards</h2>
+
+  <div class="reward-item">
+    <div class="reward-points">100 pts</div>
+    <div class="reward-details">
+      <h3>Pet Food Discount</h3>
+      <p>Get <strong>10% off</strong> pet food</p>
+    </div>
+  </div>
+
+  <div class="reward-item">
+    <div class="reward-points">300 pts</div>
+    <div class="reward-details">
+      <h3>Cat Toys Discount</h3>
+      <p>Get <strong>20% off</strong> cat toys</p>
+    </div>
+  </div>
+</div>
     `;
 }
 
