@@ -127,7 +127,7 @@ function showHomeNav() {
 function showHome() {
   screen.innerHTML = `
     <div class="card" style="animation-delay:0.05s">
-      <h2>🏆 Top CSR Sponsors</h2>
+      <h2> Top CSR Sponsors</h2>
       <div class="sponsor-row">
         <img class="sponsor-logo" src="monoprix-logo.png" alt="Monoprix" onerror="this.style.display='none'">
         <img class="sponsor-logo" src="lulu-logo.png" alt="LuLu" onerror="this.style.display='none'">
@@ -136,22 +136,22 @@ function showHome() {
     </div>
 
     <div class="card" style="animation-delay:0.12s">
-      <h2>🏅 User Leaderboard</h2>
+      <h2> User Leaderboard</h2>
       <div class="leaderboard">
         <div class="leaderboard-user rank-2">
-          <span class="rank-badge">🥈</span>
+          <span class="rank-badge"> </span>
           <img class="avatar-img" src="cat2.jfif" alt="Princess8" onerror="this.src='https://api.dicebear.com/7.x/fun-emoji/svg?seed=Princess8'">
           <b>Princess8</b>
           <p class="pts">390 pts</p>
         </div>
         <div class="leaderboard-user rank-1">
-          <span class="rank-badge">🥇</span>
+          <span class="rank-badge"> </span>
           <img class="avatar-img" src="cat1.png" alt="Meow4" onerror="this.src='https://api.dicebear.com/7.x/fun-emoji/svg?seed=Meow4'">
           <b>Meow4</b>
           <p class="pts">420 pts</p>
         </div>
         <div class="leaderboard-user rank-3">
-          <span class="rank-badge">🥉</span>
+          <span class="rank-badge"> </span>
           <img class="avatar-img" src="cat3.jpg" alt="Biney2" onerror="this.src='https://api.dicebear.com/7.x/fun-emoji/svg?seed=Biney2'">
           <b>Biney2</b>
           <p class="pts">330 pts</p>
@@ -160,12 +160,12 @@ function showHome() {
     </div>
 
     <div class="card" style="animation-delay:0.19s">
-      <h2>📊 Impact This Month</h2>
+      <h2> Impact This Month</h2>
       <img class="impact-image" src="impact-summary.png" alt="Monthly impact summary" onerror="this.style.display='none'">
     </div>
 
     <div class="card" style="animation-delay:0.26s">
-      <h2>⚡ Quick Commerce</h2>
+      <h2>  Quick Commerce</h2>
       <div class="quick-commerce-row">
         <div class="quick-btn" onclick="addToCart('Feed 5 Cats', 20)">
           <span class="qb-icon">🐱</span>
@@ -212,7 +212,7 @@ function showFeeders() {
     </div>
 
     <div class="card">
-      <h2>🍽️ Used in This Feeder</h2>
+      <h2> Used in This Feeder</h2>
       <p style="margin-bottom:12px;color:var(--text-soft);font-size:14px;">Premium Dry Cat Food 10KG</p>
       <div class="btn-row">
         <button class="btn-primary"    onclick="addToCart('Buy Same Food for My Cat', 65)">Buy for My Cat — QAR 65</button>
@@ -231,7 +231,7 @@ function showFeeders() {
 /* ===== SHOP ===== */
 function showShop() {
   screen.innerHTML = `
-    <p class="section-label">🛍️ Snoonu Pet Shop</p>
+    <p class="section-label"> Snoonu Pet Shop</p>
     <div class="product-grid">
       ${products.map((p, i) => `
         <div class="product-card" style="animation-delay:${0.05 + i * 0.07}s">
@@ -272,7 +272,7 @@ function showQuest() {
     </div>
 
     <div class="card">
-      <h2>🎯 Today's Challenges</h2>
+      <h2> Today's Challenges</h2>
       <div class="challenges-list">
         ${challenges.map((c, i) => `
           <div class="challenge-item${c.done ? ' done' : ''}" onclick="completeChallenge(${i})">
@@ -289,7 +289,7 @@ function showQuest() {
     </div>
 
     <div class="card">
-      <h2>🎁 Rewards</h2>
+      <h2> Rewards</h2>
       <div class="rewards-list">
         <div class="reward-item">
           <div class="reward-points">100 pts</div>
@@ -335,9 +335,9 @@ function completeChallenge(index) {
 function showCommunity() {
   screen.innerHTML = `
     <div class="card">
-      <h2>💬 Community</h2>
+      <h2> Community</h2>
       <div class="community-post">
-        <h3>❓ Why is my cat sneezing?</h3>
+        <h3> Why is my cat sneezing?</h3>
         <button class="btn-primary" onclick="openCommunityChat()">💬 Hop into the convo</button>
       </div>
     </div>
@@ -374,12 +374,12 @@ function showCommunity() {
     </div>
 
     <div class="card">
-      <h2>⚡ Powered by Snoonu</h2>
+      <h2> Powered by Snoonu</h2>
       <div class="powered-row">
-        <button class="btn-secondary" onclick="setActiveNav(document.querySelectorAll('.nav-btn')[2]); showShop()">🐟 Cat Food</button>
-        <button class="btn-secondary" onclick="setActiveNav(document.querySelectorAll('.nav-btn')[2]); showShop()">🎾 Cat Toys</button>
-        <button class="btn-secondary" onclick="setActiveNav(document.querySelectorAll('.nav-btn')[2]); showShop()">🧴 Supplies</button>
-        <button class="btn-secondary" onclick="showToast('🤖 AI Vet coming soon!')">🤖 AI Vet</button>
+        <button class="btn-secondary" onclick="setActiveNav(document.querySelectorAll('.nav-btn')[2]); showShop()"> Cat Food</button>
+        <button class="btn-secondary" onclick="setActiveNav(document.querySelectorAll('.nav-btn')[2]); showShop()"> Cat Toys</button>
+        <button class="btn-secondary" onclick="setActiveNav(document.querySelectorAll('.nav-btn')[2]); showShop()"> Supplies</button>
+        <button class="btn-secondary" onclick="showToast('🤖 AI Vet coming soon!')"> AI Vet</button>
       </div>
     </div>
   `;
