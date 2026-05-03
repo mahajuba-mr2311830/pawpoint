@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PawPoint</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="logo">🐾 PawPoint</div>
+            <button class="cart-btn" onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+        </header>
+
+        <main id="screen"></main>
+
+        <nav>
+            <button onclick="showHome()">🏠<span>Home</span></button>
+            <button onclick="showFeeders()">📍<span>Feeders</span></button>
+            <button onclick="showShop()">🛍<span>Shop</span></button>
+            <button onclick="showQuest()">🧩<span>PawQuest</span></button>
+            <button onclick="showCommunity()">💬<span>Community</span></button>
+        </nav>
+    </div>
+
+    <div id="cartModal" class="modal hidden">
+        <div class="modal-box">
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <h3>Total: QAR <span id="cartTotal">0</span></h3>
+            <button class="primary" onclick="checkout()">Checkout with Snoonu</button>
+            <button class="secondary" onclick="closeCart()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
