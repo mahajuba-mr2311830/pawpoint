@@ -1,7 +1,15 @@
 /* ===== STATE ===== */
 let cart = [];
 let pawPoints = 10;
+
 const screen = document.getElementById("screen");
+
+function scrollScreenToTop() {
+  screen.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
 
 const products = [
   { name: "Feed 5 Cats", price: 20, type: "impact", icon: "🐱" },
@@ -185,6 +193,8 @@ function showHome() {
       </div>
     </div>
   `;
+
+  scrollScreenToTop();
 }
 
 /* ===== FEEDERS ===== */
@@ -226,6 +236,8 @@ function showFeeders() {
     const fill = document.getElementById("feederFill");
     if (fill) fill.style.width = "18%";
   }, 100);
+
+  scrollScreenToTop();
 }
 
 /* ===== SHOP ===== */
@@ -249,6 +261,8 @@ function showShop() {
       `).join("")}
     </div>
   `;
+
+  scrollScreenToTop();
 }
 
 function getDescription(type) {
@@ -322,6 +336,8 @@ function showQuest() {
     const fill = document.getElementById("questFill");
     if (fill) fill.style.width = pct + "%";
   }, 100);
+
+  scrollScreenToTop();
 }
 
 function completeChallenge(index) {
@@ -385,6 +401,8 @@ function showCommunity() {
       </div>
     </div>
   `;
+
+  scrollScreenToTop();
 }
 
 function openCommunityChat() {
