@@ -1,5 +1,7 @@
 let cart = [];
 
+let pawPoints = 10;
+
 const screen = document.getElementById("screen");
 
 const products = [
@@ -39,6 +41,13 @@ function closeCart() {
 function checkout() {
   if (cart.length === 0) return alert("Your cart is empty.");
 
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+  // Award 1 PawPoint for every QAR 1 spent
+  const earnedPoints = total;
+
+  pawPoints += earnedPoints;
+
   cart = [];
   updateCart();
   closeCart();
@@ -47,7 +56,8 @@ function checkout() {
         <div class="card checkout-success">
             <h1>✅ Order Confirmed</h1>
             <p>Your Snoonu-powered pet care order has been placed.</p>
-            <p>You earned <strong>50 PawPoints</strong>!</p>
+            <p>You earned <strong>${earnedPoints} PawPoints</strong>!</p>
+            <p>Your total PawPower is now <strong>${pawPoints} / 100 points</strong>.</p>
             <button class="primary" onclick="showHome()">Back Home</button>
         </div>
     `;
@@ -148,11 +158,11 @@ function getDescription(type) {
 
 function showQuest() {
   screen.innerHTML = `
-        <div class="card">
-            <h2>PawPower Tier 1</h2>
-            <p>80 / 100 points</p>
-            <progress value="80" max="100"></progress>
-        </div>
+<div class="card">
+    <h2>PawPower Tier 1</h2>
+    <p>${pawPoints} / 100 points</p>
+    <progress value="${Math.min(pawPoints, 100)}" max="100"></progress>
+</div>
 
         <div class="card">
             <h2>Today's Challenges</h2>
