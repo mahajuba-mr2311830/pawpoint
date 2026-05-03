@@ -4,18 +4,18 @@ let pawPoints = 10;
 const screen = document.getElementById("screen");
 
 const products = [
-  { name: "Feed 5 Cats",            price: 20,  type: "impact",       icon: "🐱" },
-  { name: "Full Feeder Restock",    price: 25,  type: "impact",       icon: "🍽️" },
-  { name: "Street Cat Feeding Pack",price: 50,  type: "bundle",       icon: "🎁" },
-  { name: "New Cat Owner Kit",      price: 80,  type: "bundle",       icon: "🧺" },
-  { name: "Monthly Paw Plan",       price: 99,  type: "subscription", icon: "⭐" }
+  { name: "Feed 5 Cats", price: 20, type: "impact", icon: "🐱" },
+  { name: "Full Feeder Restock", price: 25, type: "impact", icon: "🍽️" },
+  { name: "Street Cat Feeding Pack", price: 50, type: "bundle", icon: "🎁" },
+  { name: "New Cat Owner Kit", price: 80, type: "bundle", icon: "🧺" },
+  { name: "Monthly Paw Plan", price: 99, type: "subscription", icon: "⭐" }
 ];
 
 const challenges = [
-  { icon: "💰", label: "Donate QAR 5",               pts: 5,  done: false },
-  { icon: "🐾", label: "Feed 1 Cat",                  pts: 10, done: false },
-  { icon: "🛍️", label: "Buy Pet Food via Snoonu",     pts: 15, done: false },
-  { icon: "📍", label: "Check Nearest PawStation",    pts: 5,  done: false }
+  { icon: "💰", label: "Donate QAR 5", pts: 5, done: false },
+  { icon: "🐾", label: "Feed 1 Cat", pts: 10, done: false },
+  { icon: "🛍️", label: "Buy Pet Food via Snoonu", pts: 15, done: false },
+  { icon: "📍", label: "Check Nearest PawStation", pts: 5, done: false }
 ];
 
 /* ===== TOAST ===== */
@@ -252,15 +252,17 @@ function showShop() {
 }
 
 function getDescription(type) {
-  if (type === "impact")       return "Sponsor real food & water for stray cats.";
-  if (type === "bundle")       return "Curated pet-care bundle via Snoonu.";
+  if (type === "impact") return "Sponsor real food & water for stray cats.";
+  if (type === "bundle") return "Curated pet-care bundle via Snoonu.";
   if (type === "subscription") return "Monthly recurring feeding plan.";
   return "";
 }
 
 /* ===== PAWQUEST ===== */
 function showQuest() {
-  const pct = Math.min((pawPoints / 100) * 100, 100);
+  const tierGoal = 100;
+  const tierProgress = Math.min(pawPoints, tierGoal);
+  const pct = (tierProgress / tierGoal) * 100;
 
   screen.innerHTML = `
     <div class="card progress-card">
@@ -268,7 +270,7 @@ function showQuest() {
       <div class="progress-track">
         <div class="progress-fill" id="questFill" style="width:0%"></div>
       </div>
-      <p class="progress-pts">${pawPoints} / 100 PawPoints</p>
+      <p class="progress-pts">${tierProgress} / ${tierGoal} PawPoints</p>
     </div>
 
     <div class="card">
@@ -397,8 +399,8 @@ function closeCommunityChat() {
 
 function sendChatMessage() {
   const input = document.getElementById("chatInput");
-  const msgs  = document.getElementById("chatMessages");
-  const msg   = input.value.trim();
+  const msgs = document.getElementById("chatMessages");
+  const msg = input.value.trim();
   if (!msg) return;
 
   msgs.innerHTML += `
