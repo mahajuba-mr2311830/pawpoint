@@ -50,6 +50,11 @@ main {
     padding: 15px;
     margin-bottom: 15px;
     box-shadow: 3px 3px 0 #7b2a8a;
+    text-align: center;
+}
+
+.card button {
+    margin: 6px;
 }
 
 h1,
@@ -128,24 +133,66 @@ button {
     left: 280px;
 }
 
-.badge {
-    display: inline-block;
-    background: white;
-    border: 3px solid #5b126d;
-    border-radius: 20px;
-    padding: 8px 12px;
-    margin: 5px;
-    font-weight: bold;
+/* CSR sponsor logo circles */
+.sponsor-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
+.sponsor-logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 4px solid #ff5fa2;
+    background: #fff;
+    object-fit: cover;
+    padding: 5px;
+}
+
+/* Leaderboard circular profile images */
 .leaderboard {
     display: flex;
     justify-content: space-around;
+    gap: 10px;
     text-align: center;
 }
 
-.avatar {
-    font-size: 40px;
+.leaderboard-user {
+    width: 30%;
+}
+
+.avatar-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 4px solid #ff5fa2;
+    background: #fff;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.leaderboard-user b {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.leaderboard-user p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Impact image */
+.impact-image {
+    width: 100%;
+    max-height: 170px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 3px solid #5b126d;
+    background: #fff;
 }
 
 nav {
@@ -200,4 +247,120 @@ nav span {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+}
+
+.feeder-map-image-box {
+    width: 100%;
+    height: 300px;
+    border: 4px solid #5b126d;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.feeder-map-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.chat-box {
+    background: #e5a0ad;
+    border: 4px solid #5b126d;
+    border-radius: 18px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 0 #7b2a8a;
+}
+
+.chat-box h3 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.chat-messages {
+    max-height: 220px;
+    overflow-y: auto;
+    background: #ffd1d8;
+    border: 3px solid #5b126d;
+    border-radius: 14px;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+.chat-message {
+    max-width: 85%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    font-size: 14px;
+}
+
+.chat-message p {
+    margin: 4px 0 0;
+}
+
+.chat-message.other {
+    background: #fff1f3;
+    border: 2px solid #5b126d;
+    text-align: left;
+}
+
+.chat-message.user {
+    background: #f3a7bd;
+    border: 2px solid #5b126d;
+    margin-left: auto;
+    text-align: right;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 8px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    border: 3px solid #5b126d;
+    border-radius: 14px;
+    padding: 10px;
+    font-weight: bold;
+    outline: none;
+}
+
+.chat-input-area button {
+    padding: 8px 12px;
+}
+
+.chat-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.chat-header h3 {
+    margin: 0;
+}
+
+.chat-close-btn {
+    position: absolute;
+    right: 0;
+    top: -4px;
+    width: 28px;
+    height: 28px;
+    border: 3px solid #5b126d;
+    border-radius: 50%;
+    background: #fff1f3;
+    color: #5b126d;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.chat-close-btn:hover {
+    background: #f3a7bd;
 }
