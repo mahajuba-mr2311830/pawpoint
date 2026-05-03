@@ -100,7 +100,7 @@ function showFeeders() {
       <p>Food level: <strong>18%</strong></p>
       <p>Last fed: 2 hours ago</p>
       <p>Camera: Live monitoring available</p>
-      <button class="primary" onclick="addToCart('Restock Al Rayyan Feeder', 25)">Restock This Feeder — QAR 25</button>
+      <button class="primary" onclick="addToCart('Restock Al Rayyan Feeder', 25)">Watch Live — QAR 15</button>
     </div>
 
     <div class="card">
